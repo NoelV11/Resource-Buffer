@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int upvotes,downvotes,noresult,i,result,n,sum1,sum2;
+string S1="+",S2="-",S3="?";
+cout<<"Enter the cases"<<endl;
+cin>>n;
+cout<<"Enter the inputs"<<endl;
+for(i=0;i<n;i++)
+{
+cout<<"Enter count of upvotes"<<endl;
+cin>>upvotes;
+cout<<"Enter the count of downvotes"<<endl;
+cin>>downvotes;
+cout<<"Enter no results"<<endl;
+cin>>noresult;
+}
+sum1=downvotes+noresult;
+for(i=0;i<n;i++)
+{
+if(upvotes>sum1)
+{
+cout<<S1<<endl;
+}
+else if(upvotes<sum1)
+{
+cout<<S2<<endl;
+}
+else
+{
+cout<<S3<<endl;
+}
+}
+return 0;
+}

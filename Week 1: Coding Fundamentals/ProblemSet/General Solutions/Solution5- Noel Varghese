@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int O,A,C,zero,var,var2,var3,n,i;
+cout<<"Enter test cases"<<endl;
+cin>>n;
+for(i=0;i<n;i++)
+{
+cout<<"Enter number of Apples"<<endl;
+cin>>A;
+cout<<"Enter number of Oranges"<<endl;
+cin>>O;
+cout<<"Enter available number of coins"<<endl;
+cin>>C;
+}
+for(i=0;i<n;i++)
+{
+if((A!=0)&&(O!=0))
+{
+if((C==1)&&(A<O))
+{
+A=A+1;
+zero=A-O;
+cout<<zero<<endl;
+}
+else if((C==1)&&(O<A))
+{
+O=O+1;
+var=A-O;
+cout<<var<<endl;
+}
+else if((C>1)&&(A<O))
+{
+A=A+C;
+var2=A-O;
+cout<<var2<<endl;
+}
+else
+{
+O=O+C;
+var3=O-A;
+cout<<var3<<endl;
+}
+}
+}
+return 0;
+}
